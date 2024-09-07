@@ -1,0 +1,23 @@
+[Unit]
+Description=Fast stable diffusion on CPU
+Documentation=https://github.com/rupeshs/fastsdcpu
+After=network.target
+
+; Support auto restart, required version >= 230. Ref: https://bit.ly/2YJ36hQ
+;StartLimitIntervalSec=500
+;StartLimitBurst=5
+
+[Service]
+; https://qiita.com/bluesDD/items/eaf14408d635ffd55a18
+; fixme
+Type=simple
+PIDFile=
+ExecStart=
+ExecStop=
+
+; Support auto restart. Ref: https://bit.ly/2YJ36hQ
+; Restart=on-failure
+; RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
